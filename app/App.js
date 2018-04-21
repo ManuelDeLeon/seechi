@@ -1,5 +1,9 @@
 App({
 	render() {
-		<h1>Hello World</h1>
+		<div>
+			<Header />
+			<h1>Hello World</h1>
+
+		</div>
 	}
 })

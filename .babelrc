@@ -7,7 +7,7 @@
     "stage-0",
     "react"
   ],
-  "plugins": ["add-module-exports", "viewmodel-react-plugin"],
+  "plugins": ["add-module-exports", "viewmodel-react-plugin", "transform-decorators-legacy"],
   "env": {
     "production": {
       "presets": ["react-optimize"],
