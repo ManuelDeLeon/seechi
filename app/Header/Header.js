@@ -1,7 +1,5 @@
 Header({
-	render() {
-		<div>
-			
-		</div>
-	}
-})
+  render() {
+    <div />;
+  }
+});
