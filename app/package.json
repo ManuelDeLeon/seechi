@@ -2,8 +2,7 @@
   "name": "electron-react-boilerplate",
   "productName": "electron-react-boilerplate",
   "version": "1.0.0",
-  "description":
-    "Electron application boilerplate based on React, Webpack, React Hot Loader for rapid application development",
+  "description": "Electron application boilerplate based on React, Webpack, React Hot Loader for rapid application development",
   "main": "./main.prod.js",
   "author": {
     "name": "C. T. Lin",
@@ -11,10 +10,11 @@
     "url": "https://github.com/chentsulin"
   },
   "scripts": {
-    "electron-rebuild":
-      "node -r babel-register ../internals/scripts/ElectronRebuild.js",
+    "electron-rebuild": "node -r babel-register ../internals/scripts/ElectronRebuild.js",
     "postinstall": "npm run electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "sqlite3": "^4.0.0"
+  }
 }

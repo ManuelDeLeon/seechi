@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { App } from "./App";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import Popper from "popper.js/dist/popper-utils.js";
 
 render(<App />, document.getElementById("root"));
 
