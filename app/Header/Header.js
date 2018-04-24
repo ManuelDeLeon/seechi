@@ -1,5 +1,0 @@
-Header({
-  render() {
-    <div />;
-  }
-});

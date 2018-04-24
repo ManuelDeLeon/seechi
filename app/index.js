@@ -1,9 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
 import { App } from "./App";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/jquery/dist/jquery";
+import Popper from "popper.js/dist/popper";
+import "../node_modules/bootstrap/dist/js/bootstrap";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import Popper from "popper.js/dist/popper-utils.js";
+import "./app.global.css";
+import "./Shared/Search";
 
 render(<App />, document.getElementById("root"));
 
