@@ -49,6 +49,16 @@ app.on("window-all-closed", () => {
   }
 });
 
+require("electron-context-menu")({
+  prepend: (params, browserWindow) => [
+    {
+      label: "Rainbow",
+      // Only show it when right-clicking images
+      visible: params.mediaType === "image"
+    }
+  ]
+});
+
 app.on("ready", async () => {
   if (
     process.env.NODE_ENV === "development" ||
@@ -83,3 +93,4 @@ app.on("ready", async () => {
   // menuBuilder.buildMenu();
   mainWindow.setMenu(null);
 });
+
