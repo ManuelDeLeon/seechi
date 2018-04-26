@@ -6,11 +6,10 @@ ViewModel.share({
     activeId: ViewModel.property.integer.beforeUpdate(function(newValue) {
       const oldId = this.activeId();
       if (oldId !== 0) {
-				const search = this.list().find(l => l.id === oldId);
-				if (search) {
-search.text = this.activeText();
-				}
-        
+        const search = this.list().find(l => l.id === oldId);
+        if (search) {
+          search.text = this.activeText();
+        }
       }
       if (newValue === 0) {
         this.activeText.reset();
@@ -34,11 +33,11 @@ search.text = this.activeText();
     default: {
       id: 0,
       text: "+"
-		},
-		remove(id) {
-			this.activeId(0);
-			const index = this.list().findIndex(e => e.id === id);
-			this.list().splice(index, 1);
-		}
+    },
+    remove(id) {
+      this.activeId(0);
+      const index = this.list().findIndex(e => e.id === id);
+      this.list().splice(index, 1);
+    }
   }
 });

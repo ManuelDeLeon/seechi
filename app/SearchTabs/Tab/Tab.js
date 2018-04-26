@@ -3,19 +3,14 @@ Tab({
     search: "search"
   },
   id: 0,
-	text: "",
-	hovering: false,
-	showRemove() {
-		return this.hovering() && this.search.default().id !== this.id();
-	},
-	removeHover: false,
-	styles() {
-		return { remove: { color: this.removeHover() ? "red" : "gray", 'font-size': this.removeHover() ? "medium" : "x-small" } };
-	},
+  text: "",
+  hovering: false,
+  removeHover: false,
+  removeColor() {
+    return this.removeHover() ? "red" : "lightgray";
+  },
   displayText() {
-    if (this.search.default().id === this.id()) {
-      return this.search.default().text;
-    } else if (this.id() === this.search.activeId()) {
+    if (this.id() === this.search.activeId()) {
       return this.search.activeText();
     } else {
       return this.text();
@@ -29,12 +24,17 @@ Tab({
   },
   render() {
     <li class="nav-item">
-      <a b="hover: hovering, class: { active: active }, click: activate" class="nav-link" href="#">
+      <a
+        b="hover: hovering, class: { active: active }, click: activate"
+        class="nav-link"
+        href="#"
+      >
         <span b="text: displayText" />
-				<i 
-					b="if: showRemove, hover: removeHover, style: styles.remove, click: search.remove(id)" 
-					class="fa fa-remove" 
-					style="margin-left: 10px; line-height: 21px" />
+        <i
+          class="fa fa-times"
+          b="hover: removeHover, style: { color: removeColor }, click: search.remove(id), class: { fa-times-circle: removeHover }"
+          style="margin-left: 12px;"
+        />
       </a>
     </li>;
   }

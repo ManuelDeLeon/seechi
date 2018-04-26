@@ -1,2 +1,15 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+
+table {
+	margin-bottom: 0 !important
+}
+
+body {
+	font-size: smaller
+}
+
+table.resultsMenu td {
+	border-top: 0;
+	
+}

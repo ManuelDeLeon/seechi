@@ -93,4 +93,3 @@ app.on("ready", async () => {
   // menuBuilder.buildMenu();
   mainWindow.setMenu(null);
 });
-

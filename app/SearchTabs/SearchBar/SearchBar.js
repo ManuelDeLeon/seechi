@@ -7,14 +7,9 @@ SearchBar({
     this.input.focus();
   },
   render() {
-    <form>
+    <form style="margin-top: 10px">
       <div class="form-group">
-        <input
-          b="value: search.activeText, ref: input"
-          type="text"
-          class="form-control"
-          placeholder="What do you want to search?"
-        />
+        <input b="value: search.activeText, ref: input" type="text" class="form-control form-control-sm" />
       </div>
     </form>;
   }

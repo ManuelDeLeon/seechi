@@ -8,6 +8,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap";
 import "./App.css";
 import "./app.global.css";
 import "./Shared/Search";
+import "./Shared/Results";
 
 render(<App />, document.getElementById("root"));
 
